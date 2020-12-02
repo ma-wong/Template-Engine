@@ -13,6 +13,10 @@ Project is coded in:
 * [Inquirer package](https://www.npmjs.com/package/inquirer)
 * Jest (Dev Dependency)
 
+## Tests
+To run tests, run the following command:
+npm run test
+
 ## Installation
 In order to install necessary dependencies, please run the following command:
 npm i inquirer
