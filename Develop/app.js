@@ -13,7 +13,6 @@ const render = require("./lib/htmlRenderer");
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
-inquirer.prompt
 const employees = [];
 
 const managerQs = [
@@ -105,7 +104,7 @@ const internQs = [
 
 function managerPrompt() {
     inquirer.prompt(managerQs).then(function(res) {
-        var manager = new Manager(res.name, res.id, res.email, res.officeNumber);
+        let manager = new Manager(res.name, res.id, res.email, res.officeNumber);
         employees.push(manager);
 
         if (res.type === 'Engineer') {
@@ -122,7 +121,7 @@ function managerPrompt() {
 
 function engineerPrompt() {
     inquirer.prompt(engineerQs).then(function(res) {
-        var engineer = new Engineer(res.name, res.id, res.email, res.github);
+        let engineer = new Engineer(res.name, res.id, res.email, res.github);
         employees.push(engineer);
 
         if (res.type === 'Intern') {
@@ -137,6 +136,24 @@ function engineerPrompt() {
     });
 }
 
+function internPrompt() {
+    inquirer.prompt(internQs).then(function(res) {
+        let intern = new Intern(res.name, res.id, res.email, res.school);
+        employees.push(intern);
+
+        if (res.type === 'Engineer') {
+            engineerPrompt();
+        }
+        else if (res.type === "Manager") {
+            managerPrompt();
+        }
+        else {
+            return;
+        }
+    });
+}
+
+managerPrompt();
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
