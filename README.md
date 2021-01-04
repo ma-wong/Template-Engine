@@ -19,9 +19,10 @@ npm run test
 
 ## Installation
 In order to install necessary dependencies, please run the following command:
-npm i inquirer
+npm i
 
 ## Functionality
+App is initiated once all dependencies are installed and the user runs the command "node app.js". When started, the app will prompt the user to enter the information needed to fill out the template generator. Once completed, a prestyled html page will be generated in the output folder with all of the user input data.
 
 ## Preview
 ![Command to initialize](./Assets/command.png)
