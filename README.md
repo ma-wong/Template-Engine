@@ -41,4 +41,4 @@ Example of generated manager card
 Example of generated intern card
 
 ### Links
-[Link to walkthrough video](https://www.dropbox.com/s/3idgxgdqf0sohb7/readme-generator%20walkthrough.mov?dl=0)
+[Link to walkthrough video](https://www.dropbox.com/s/74lmxbowl1frwsr/template-engine%20walkthrough.mov?dl=0)
